@@ -1,0 +1,104 @@
+public class benchmark.objects.A extends java.lang.Object
+{
+    public int i;
+    public benchmark.objects.B f;
+    public benchmark.objects.B g;
+    public benchmark.objects.B h;
+
+    public void <init>()
+    {
+        benchmark.objects.A r0;
+        benchmark.objects.B $r1, $r2;
+
+        r0 := @this: benchmark.objects.A;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<benchmark.objects.A: int i> = 5;
+
+        $r1 = new benchmark.objects.B;
+
+        specialinvoke $r1.<benchmark.objects.B: void <init>()>();
+
+        r0.<benchmark.objects.A: benchmark.objects.B f> = $r1;
+
+        $r2 = new benchmark.objects.B;
+
+        specialinvoke $r2.<benchmark.objects.B: void <init>()>();
+
+        r0.<benchmark.objects.A: benchmark.objects.B g> = $r2;
+
+        return;
+    }
+
+    public void <init>(benchmark.objects.B)
+    {
+        benchmark.objects.A r0;
+        benchmark.objects.B r1, $r2, $r3;
+
+        r0 := @this: benchmark.objects.A;
+
+        r1 := @parameter0: benchmark.objects.B;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+	
+        r0.<benchmark.objects.A: int i> = 5;
+
+	// 初始化 this.f
+        $r2 = new benchmark.objects.B;
+
+        specialinvoke $r2.<benchmark.objects.B: void <init>()>();
+
+	
+        r0.<benchmark.objects.A: benchmark.objects.B f> = $r2;
+
+	// 初始化 this.g
+        $r3 = new benchmark.objects.B;
+
+        specialinvoke $r3.<benchmark.objects.B: void <init>()>();
+
+        r0.<benchmark.objects.A: benchmark.objects.B g> = $r3;
+
+	// 赋值 this.f
+        r0.<benchmark.objects.A: benchmark.objects.B f> = r1;
+
+        return;
+    }
+
+    public benchmark.objects.B getF()
+    {
+        benchmark.objects.A r0;
+        benchmark.objects.B $r1;
+
+        r0 := @this: benchmark.objects.A;
+
+        $r1 = r0.<benchmark.objects.A: benchmark.objects.B f>;
+
+        return $r1;
+    }
+
+    public benchmark.objects.B getH()
+    {
+        benchmark.objects.A r0;
+        benchmark.objects.B $r1;
+
+        r0 := @this: benchmark.objects.A;
+
+        $r1 = r0.<benchmark.objects.A: benchmark.objects.B h>;
+
+        return $r1;
+    }
+
+    public benchmark.objects.B id(benchmark.objects.B)
+    {
+        benchmark.objects.A r0;
+        benchmark.objects.B r1;
+
+        r0 := @this: benchmark.objects.A;
+
+        r1 := @parameter0: benchmark.objects.B;
+
+        return r1;
+    }
+}

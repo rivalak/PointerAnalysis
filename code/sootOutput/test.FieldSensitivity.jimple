@@ -1,0 +1,98 @@
+public class test.FieldSensitivity extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        test.FieldSensitivity r0;
+
+        r0 := @this: test.FieldSensitivity;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    private void assign(benchmark.objects.A, benchmark.objects.A)
+    {
+        test.FieldSensitivity r0;
+        benchmark.objects.A r1, r2;
+        benchmark.objects.B $r3;
+
+        r0 := @this: test.FieldSensitivity;
+
+        r1 := @parameter0: benchmark.objects.A;
+
+        r2 := @parameter1: benchmark.objects.A;
+
+        $r3 = r1.<benchmark.objects.A: benchmark.objects.B f>;
+
+        r2.<benchmark.objects.A: benchmark.objects.B f> = $r3;
+
+        return;
+    }
+
+    private void test()
+    {
+        test.FieldSensitivity r0;
+        benchmark.objects.B r1, r5, $r6, $r9;
+        benchmark.objects.A r2, r3, $r7, $r8;
+
+        r0 := @this: test.FieldSensitivity;
+
+        staticinvoke <benchmark.internal.Benchmark: void alloc(int)>(1);
+
+        $r6 = new benchmark.objects.B;
+
+        specialinvoke $r6.<benchmark.objects.B: void <init>()>();
+
+        r1 = $r6;
+
+        staticinvoke <benchmark.internal.Benchmark: void alloc(int)>(2);
+
+        $r7 = new benchmark.objects.A;
+
+        specialinvoke $r7.<benchmark.objects.A: void <init>(benchmark.objects.B)>(r1);
+
+        r2 = $r7;
+
+        staticinvoke <benchmark.internal.Benchmark: void alloc(int)>(3);
+
+        $r8 = new benchmark.objects.A;
+
+        specialinvoke $r8.<benchmark.objects.A: void <init>()>();
+
+        r3 = $r8;
+
+        staticinvoke <benchmark.internal.Benchmark: void alloc(int)>(4);
+
+        $r9 = new benchmark.objects.B;
+
+        specialinvoke $r9.<benchmark.objects.B: void <init>()>();
+
+        specialinvoke r0.<test.FieldSensitivity: void assign(benchmark.objects.A,benchmark.objects.A)>(r2, r3);
+
+        r5 = r3.<benchmark.objects.A: benchmark.objects.B f>;
+
+        staticinvoke <benchmark.internal.Benchmark: void test(int,java.lang.Object)>(1, r5);
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        test.FieldSensitivity r1, $r2;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r2 = new test.FieldSensitivity;
+
+        specialinvoke $r2.<test.FieldSensitivity: void <init>()>();
+
+        r1 = $r2;
+
+        specialinvoke r1.<test.FieldSensitivity: void test()>();
+
+        return;
+    }
+}

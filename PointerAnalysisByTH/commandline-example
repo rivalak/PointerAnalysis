@@ -1,0 +1,4 @@
+Transform to the Jimple code
+
+(1) java -jar soot-trunk.jar -process-dir bin -f J
+(2) java -jar soot-trunk.jar tests.Main -soot-class-path bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar -f J

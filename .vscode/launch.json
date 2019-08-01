@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Hello",
+            "request": "launch",
+            "mainClass": "test.Hello",
+            "projectName": "code"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyPointerAnalysis",
+            "request": "launch",
+            "mainClass": "core.MyPointerAnalysis",
+            "projectName": "PointerAnalysisByTH"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FieldSensitivity",
+            "request": "launch",
+            "mainClass": "test.FieldSensitivity",
+            "projectName": "code"
+        }
+    ]
+}
